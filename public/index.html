@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>SharkZapper Mobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link type="text/css" rel="stylesheet" href="/css/style.css"></link>
+<div id="debug"></div>
+<script type="text/javascript" src="/js/mobile.js"></script>
+<script type="text/javascript" src="/js/jquery-1.4.4.min.js" async="async" onload="sharkZapperMobile.onjQueryLoaded()"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js" async="async" onload="sharkZapperMobile.onSocketIoLoaded()"></script> 
+<script type="text/javascript">
+// Needed for older browsers that do not support onload
+if (window.$) { sharkZapperMobile.onjQueryLoaded(); }
+if (window.io) { sharkZapperMobile.onSocketIoLoaded(); }
+</script>
+<script type="text/javascript" src="/js/analytics.js" async="async"></script>
+</head>
+<body>
+<div id="sharkIdEntry" style="display:none">
+    <img src="/img/sharkzapper_icon.png" style="float: left" width="20%" />
+    <form id="sharkIdForm">
+    <label for="sharkIdInput">Enter the ID number from SharkZapper:</label>
+    <br />
+    <input id="sharkIdInput" type="number" min="1" max="9999" /><button id="sharkIdSubmit">Go</button>
+    </form>
+</div>
+<div id="sharkStatus" style="display:none">
+    <div id="artContainer">
+        <img src="http://static.a.gs-cdn.net/webincludes/images/default/album_100.png" id="albumArt" />
+        <div id="artLoading" style="display:none"></div>
+    </div>
+    <div id="controls">
+        <button id="prevBtn" title="Previous Song"></button>
+        <button id="playPauseBtn" title="Play / Pause"></button>
+        <button id="nextBtn" title="Next Song"></button>
+    </div>
+    <div id="details">
+        <p id="songName">(unknown)</p>
+        <p id="albumName">(unknown)</p>
+        <p id="artistName">(unknown)</p>
+    </div>
+</div>
+<div class="clearer"></div>
+<div id="disclaimer">
+<p>This is NOT an offical Grooveshark product, and is not intended as a replacement to <a href="http://m.grooveshark.com/">Grooveshark Mobile</a>.<br />For full mobile functionality, purchase Grooveshark Anywhere and use <a href="http://m.grooveshark.com/">Grooveshark Mobile</a></p>
+</body>
+</html>

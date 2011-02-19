@@ -1,0 +1,106 @@
+@-webkit-keyframes spin {
+ 0% {
+   -webkit-transform: rotateZ(0deg);
+ }
+ 100% {
+   -webkit-transform: rotateZ(360deg);
+ }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+    font-size: 12px;
+}
+
+a {
+    color: lightblue;
+}
+
+#sharkIdEntry {
+    padding: 1em 0 0 0; 
+}
+
+#sharkStatus, #sharkIdEntry, #disclaimer {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+}
+
+#albumArt {
+    float:left;
+    width:100px;
+    height:100px;
+}
+
+#artLoading {
+    background: url(/img/ajax-loader.png) no-repeat;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    left: 42px;
+    top: 42px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+#songName {
+    font-weight: bold;
+}
+
+#controls, #details {
+    margin: 0;
+}
+
+#details { 
+    margin-left: 105px;
+}
+
+#controls {
+    float: left;
+    clear: left;
+}
+
+#controls button {
+    background: url(http://static.a.gs-cdn.net/webincludes/css/images/player/controls.png) no-repeat;
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+}
+
+#controls #prevBtn        { background-position: -45px -80px; width: 30px;}
+#controls #prevBtn:hover  { background-position: -85px -80px; }
+#controls #prevBtn:active { background-position: -125px -80px; }
+
+#controls #playPauseBtn        { background-position: -40px -40px; }
+#controls #playPauseBtn:hover  { background-position: -80px -40px; }
+#controls #playPauseBtn:active { background-position: -120px -40px; }
+
+#controls #playPauseBtn.paused        { background-position: -40px 0; }
+#controls #playPauseBtn.paused:hover  { background-position: -80px 0; }
+#controls #playPauseBtn.paused:active { background-position: -120px 0; }
+
+#controls #nextBtn        { background-position: -45px -120px; width: 30px; }
+#controls #nextBtn:hover  { background-position: -85px -120px; }
+#controls #nextBtn:active { background-position: -125px -120px; }
+
+.clearer { 
+    clear: both;
+}
+
+#disclaimer { 
+    border-top: 1px solid gray;
+    font-size: 80%;
+    margin: 1em 0 0 0;
+    padding: 0.2em 0 0 0;
+    
+}

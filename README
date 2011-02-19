@@ -1,0 +1,6 @@
+SharkZapper Mobile Server
+
+Requires:
+* NodeJS
+* Connect
+* Socket.IO-node
